@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varoche - Tienda de Ropa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Varoche Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Hombres</a></li>
+                <li><a href="#">Mujeres</a></li>
+                <li><a href="#">Niños</a></li>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Bienvenido a Varoche</h1>
+                <p>Moda elegante y moderna para todos.</p>
+                <a href="#" class="btn">Compra Ahora</a>
+            </div>
+        </section>
+        <section class="products">
+            <div class="product">
+                <img src="vch20002.png" alt="Hoodie">
+                <h2>Hoodie</h2>
+                <p>100% algodón</p>
+                <p class="price">$50.00</p>
+                <div class="details">
+                    <label for="size">Talla:</label>
+                    <select id="size">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label for="quantity">Cantidad:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+                <button onclick="addToCart()">Añadir al Carrito</button>
+            </div>
+            <!-- Añadir más productos aquí -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Varoche. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function addToCart() {
+            const size = document.getElementById('size').value;
+            const quantity = document.getElementById('quantity').value;
+            alert(`Añadido al carrito: Hoodie, Talla ${size}, Cantidad ${quantity}`);
+            // Aquí se puede añadir la funcionalidad para procesar el pago
+            processPayment(size, quantity);
+        }
+
+        function processPayment(size, quantity) {
+            // Funcionalidad básica de pago (aquí deberías integrar tu pasarela de pago)
+            console.log(`Procesando pago para Hoodie, Talla ${size}, Cantidad ${quantity}`);
+            alert('Pago procesado con éxito');
+        }
+    </script>
+</body>
+</html>
